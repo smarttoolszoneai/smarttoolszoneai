@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Tools Zone AI - International AI Hub</title>
+    
+    <!-- Google Translate Integration -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <style>
+        :root { --primary: #007bff; --dark: #1a1a2e; --light: #ffffff; }
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #f4f4f9; color: #333; }
+        
+        /* Header & Nav */
+        header { background: var(--dark); color: white; padding: 15px; text-align: center; position: sticky; top: 0; z-index: 1000; }
+        #google_translate_element { margin-top: 10px; }
+
+        /* Dashboard Grid */
+        .dashboard-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; padding: 20px; max-width: 1200px; margin: auto; }
+        .tool-card { background: white; padding: 20px; border-radius: 12px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1); cursor: pointer; transition: 0.3s; border: 1px solid #ddd; }
+        .tool-card:hover { transform: translateY(-5px); border-color: var(--primary); }
+        .tool-card i { font-size: 30px; color: var(--primary); }
+        .tool-card h3 { font-size: 16px; margin: 10px 0 0; }
+
+        /* Tool Logic Area */
+        .tool-execution-area { background: white; margin: 20px auto; padding: 30px; max-width: 800px; border-radius: 15px; display: none; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        input, textarea { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px; }
+        button { background: var(--primary); color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; width: 100%; font-size: 18px; }
+
+        /* SEO Article Section */
+        .article-section { max-width: 900px; margin: 40px auto; padding: 20px; background: white; line-height: 1.8; text-align: justify; border-radius: 10px; }
+        
+        /* Ads Placeholder */
+        .ad-slot { background: #f1f1f1; text-align: center; padding: 20px; margin: 20px 0; border: 2px dashed #bbb; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Smart Tools Zone AI</h1>
+    <div id="google_translate_element"></div>
+</header>
+
+<!-- Mobi Tag Ads Start -->
+<div class="ad-slot">
+    <p>Mobi Tag Advertisement Code Here</p>
+</div>
+
+<!-- Dashboard Section -->
+<div class="dashboard-container" id="dashboard">
+    <!-- Tool 1 -->
+    <div class="tool-card" onclick="openTool('hashtag')">
+        <i>#️⃣</i>
+        <h3>AI Hashtag Gen</h3>
+    </div>
+    <!-- Tool 2 -->
+    <div class="tool-card" onclick="openTool('keyword')">
+        <i>🔑</i>
+        <h3>Keyword Research</h3>
+    </div>
+    <!-- Tool 3 -->
+    <div class="tool-card" onclick="openTool('resizer')">
+        <i>🖼️</i>
+        <h3>High-Res Image Tool</h3>
+    </div>
+    <!-- Add more cards here for 50 tools -->
+</div>
+
+<!-- Tool Interface -->
+<div id="tool-box" class="tool-execution-area">
+    <button onclick="closeTool()" style="background:red; width:80px; margin-bottom:10px;">Back</button>
+    <div id="tool-content"></div>
+</div>
+
+<!-- Long SEO Article -->
+<article class="article-section">
+    <h2>The Ultimate Guide to AI Tools 2024</h2>
+    <p>Welcome to Smart Tools Zone AI, the world's most comprehensive platform for AI-powered utilities. Our mission is to provide high-quality tools without any cost, API, or login requirements...</p>
+    
+    <h3>Why Use Our AI Hashtag Generator?</h3>
+    <p>(یہاں آپ اپنا 1500 الفاظ کا آرٹیکل لکھنا جاری رکھ سکتے ہیں...) Artificial intelligence has revolutionized how we create content. From SEO keywords to social media growth...</p>
+
+    <!-- Ad inside Article -->
+    <div class="ad-slot">
+        <p>In-Article Ad Placement</p>
+    </div>
+
+    <h3>Maximizing SEO with Keyword Tools</h3>
+    <p>Keywords are the backbone of digital marketing. Our tool uses client-side algorithms to suggest the most relevant tags for your niche...</p>
+</article>
+
+<footer>
+    <p style="text-align: center; padding: 20px; background: #1a1a2e; color: white;">
+        &copy; 2024 Smart Tools Zone AI - Worldwide Accessibility
+    </p>
+</footer>
+
+<script>
+    function openTool(toolType) {
+        document.getElementById('dashboard').style.display = 'none';
+        const toolBox = document.getElementById('tool-box');
+        const content = document.getElementById('tool-content');
+        toolBox.style.display = 'block';
+
+        if(toolType === 'hashtag') {
+            content.innerHTML = `
+                <h2>AI Hashtag Generator</h2>
+                <input type="text" id="tagInput" placeholder="Enter topic (e.g. Travel)">
+                <button onclick="generateHashtags()">Generate</button>
+                <textarea id="result" rows="5" readonly></textarea>
+            `;
+        } else if(toolType === 'keyword') {
+            content.innerHTML = `
+                <h2>Keyword Research Tool</h2>
+                <input type="text" id="keyInput" placeholder="Enter main keyword">
+                <button onclick="generateKeywords()">Get Keywords</button>
+                <textarea id="result" rows="5" readonly></textarea>
+            `;
+        }
+    }
+
+    function closeTool() {
+        document.getElementById('tool-box').style.display = 'none';
+        document.getElementById('dashboard').style.display = 'grid';
+    }
+
+    // Basic Logic for Tools (No API needed)
+    function generateHashtags() {
+        const val = document.getElementById('tagInput').value;
+        document.getElementById('result').value = "#" + val + " #AI #Trending #SmartTools #Viral2024 #" + val + "AI";
+    }
+
+    function generateKeywords() {
+        const val = document.getElementById('keyInput').value;
+        document.getElementById('result').value = val + " tips, " + val + " guide, best " + val + " 2024, how to use " + val;
+    }
+</script>
+
+</body>
+</html>

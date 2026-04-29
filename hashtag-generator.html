@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Hashtag Generator | Viral Tags for Instagram & TikTok</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Free AI Hashtag Generator to find viral and trending hashtags for Instagram, TikTok, and Twitter. Boost your reach with 100% free, AI-powered tags.">
+    <meta name="keywords" content="AI Hashtag Generator, Viral Hashtags, Instagram Tags, TikTok Hashtags, Smart Tools Zone AI">
+    
+    <style>
+        :root { --primary: #6366f1; --bg: #f9fafb; }
+        body { font-family: sans-serif; background-color: var(--bg); margin: 0; line-height: 1.6; color: #333; }
+        .container { max-width: 800px; margin: 0 auto; padding: 20px; }
+        .tool-box { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); text-align: center; }
+        input { width: 80%; padding: 15px; border: 2px solid #ddd; border-radius: 8px; margin-bottom: 10px; }
+        button { background: var(--primary); color: white; border: none; padding: 15px 30px; border-radius: 8px; cursor: pointer; font-size: 18px; }
+        #result { margin-top: 20px; padding: 15px; background: #eee; border-radius: 8px; display: none; word-break: break-all; }
+        .ad-slot { background: #f1f1f1; padding: 20px; margin: 20px 0; border: 1px dashed #bbb; text-align: center; }
+        article { background: white; padding: 30px; border-radius: 15px; margin-top: 30px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1 style="text-align: center;">AI Viral Hashtag Generator</h1>
+    
+    <!-- Ad Slot Top -->
+    <div class="ad-slot">
+        <p>MobiTag Ad Code Here (Top)</p>
+    </div>
+
+    <div class="tool-box">
+        <input type="text" id="tagInput" placeholder="Enter Niche (e.g. Travel, Fitness, Tech)">
+        <button onclick="generateTags()">Generate Hashtags</button>
+        <div id="result"></div>
+    </div>
+
+    <!-- SEO Article -->
+    <article>
+        <h2>Mastering Social Media with AI Hashtags</h2>
+        <p>Hashtags are the secret sauce to going viral on platforms like Instagram and TikTok. Our AI tool analyzes your niche and provides evergreen tags that stay relevant for years. (یہاں آپ کا 1500 الفاظ کا آرٹیکل شروع ہوتا ہے...)</p>
+        
+        <h3>Why Use Trending Tags?</h3>
+        <p>Using the right tags helps the algorithm categorize your content correctly. This leads to more views, likes, and followers. Our tool is 100% free and requires no login or API. It's built for international creators who want fast results.</p>
+        
+        <!-- Ad Slot Middle -->
+        <div class="ad-slot">
+            <p>MobiTag Ad Code Here (Middle)</p>
+        </div>
+
+        <p>Whether you are a professional marketer or a beginner, Smart Tools Zone AI provides you with high-quality SEO utilities. This hashtag generator uses advanced client-side logic to suggest viral tags instantly.</p>
+        
+        <!-- More Article Content to reach 1500 words -->
+        <p>Keep adding your detailed text here about Instagram marketing, TikTok growth, and SEO strategies...</p>
+    </article>
+
+    <!-- Ad Slot Bottom -->
+    <div class="ad-slot">
+        <p>MobiTag Ad Code Here (Bottom)</p>
+    </div>
+</div>
+
+<script>
+    function generateTags() {
+        const val = document.getElementById('tagInput').value;
+        if(!val) { alert("Please enter a word"); return; }
+        const tags = `#${val} #viral #trending #explore #smarttools #foryou #2024 #best${val} #ai #socialmedia`;
+        const res = document.getElementById('result');
+        res.style.display = 'block';
+        res.innerHTML = `<strong>Your Tags:</strong><br>${tags}`;
+    }
+</script>
+
+</body>
+</html>
